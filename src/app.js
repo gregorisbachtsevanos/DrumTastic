@@ -5,14 +5,14 @@ function playSound(e) {
     const key = document.querySelector(
         `.key[data-key='${e.keyCode}']`
     );
-    if (!audio) return; //stop the function from running all together
-    audio.currentTime = 0; //rewind to the start
+    if (!audio) return;
+    audio.currentTime = 0;
     audio.play();
     key.classList.add("playing");
 }
 
 function removeTransition(e) {
-    if (e.propertyName !== "transform") return; //skip it if it's not transform
+    if (e.propertyName !== "transform") return;
     this.classList.remove("playing");
 }
 
