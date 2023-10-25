@@ -60,14 +60,14 @@ window.addEventListener('keydown', playSound);
 const container = document.getElementById("sound-wave-container");
 const waveIds = ["firstWave", "secondWave", "thirdWave"];
 
-function createAndAppendWaveElement(id) {
+function createWaveElement(id) {
     const waveDiv = document.createElement("div");
     waveDiv.classList.add("sound-wave");
     waveDiv.setAttribute("id", id);
     container.appendChild(waveDiv);
 }
 
-waveIds.forEach(createAndAppendWaveElement);
+waveIds.forEach(createWaveElement);
 
 const firstWave = document.getElementById("firstWave");
 const secondWave = document.getElementById("secondWave");
