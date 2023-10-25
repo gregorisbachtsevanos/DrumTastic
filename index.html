@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Drum Kit</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="src/style.css" />
+	</head>
+	<body>
+		<div id="full">
+			<div class="container">
+				<div class="keys row col-4">
+					<div data-key="65" class="key">
+						<kbd>A</kbd>
+						<span class="sound">hihat</span>
+					</div>
+				</div>
+				<div class="keys row col-4">
+					<div data-key="83" class="key">
+						<kbd>S</kbd>
+						<span class="sound">crash</span>
+					</div>
+				</div>
+				<div class="keys row col-4">
+					<div data-key="68" class="key">
+						<kbd>D</kbd>
+						<span class="sound">openhat</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="keys row col-4">
+					<div data-key="70" class="key">
+						<kbd>F</kbd>
+						<span class="sound">rackTom</span>
+					</div>
+				</div>
+				<div class="keys row col-4">
+					<div data-key="71" class="key">
+						<kbd>G</kbd>
+						<span class="sound">snare</span>
+					</div>
+				</div>
+				<div class="keys row col-4">
+					<div data-key="72" class="key">
+						<kbd>H</kbd>
+						<span class="sound">clap</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="keys row col-4">
+					<div data-key="74" class="key">
+						<kbd>J</kbd>
+						<span class="sound">tom</span>
+					</div>
+				</div>
+				<div class="keys row col-4">
+					<div data-key="75" class="key">
+						<kbd>K</kbd>
+						<span class="sound">floorTom</span>
+					</div>
+				</div>
+				<div class="keys row col-4">
+					<div data-key="76" class="key">
+						<kbd>L</kbd>
+						<span class="sound">kick</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<audio data-key="65" src="public/sounds/clap.wav"></audio>
+		<audio data-key="83" src="public/sounds/Hi-Hat-Closed.mp3"></audio>
+		<audio data-key="68" src="public/sounds/Kick.mp3"></audio>
+		<audio data-key="70" src="public/sounds/High-Hat-Open.mp3"></audio>
+		<audio data-key="71" src="public/sounds/Big-Rack-Tom.mp3"></audio>
+		<audio data-key="72" src="public/sounds/Crash.mp3"></audio>
+		<audio data-key="74" src="public/sounds/Snare.mp3"></audio>
+		<audio data-key="75" src="public/sounds/Tom.mp3"></audio>
+		<audio data-key="76" src="public/sounds/Floor-Tom.mp3"></audio>
+
+		<script type="text/javascript" src="./src/app.js"></script>
+	</body>
+</html>

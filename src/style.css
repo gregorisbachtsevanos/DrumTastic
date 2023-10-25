@@ -1,8 +1,11 @@
 #full{
-	background-image: url('../image/drums.jpg');
+	background-image: url('../public/image/drums.jpg');
 	background-size: cover;
-	
-}	
+	width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
 
 .keys{
 	margin: 4% auto auto auto;
