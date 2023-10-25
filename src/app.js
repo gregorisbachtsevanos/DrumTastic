@@ -23,15 +23,6 @@ function createDrumKey(keyCode, keyLabel, soundName, audioSrc) {
     document.body.appendChild(audioElement);
 }
 
-function playSound(e) {
-    const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
-    const key = document.querySelector(`.key[data-key='${e.keyCode}']`);
-    if (!audio) return;
-    audio.currentTime = 0;
-    audio.play();
-    key.classList.add('playing');
-}
-
 function removeTransition(e) {
     if (e.propertyName !== 'transform') return;
     this.classList.remove('playing');
@@ -53,10 +44,6 @@ drumKitData.forEach((drumKeyData) => {
     createDrumKey(drumKeyData.keyCode, drumKeyData.keyLabel, drumKeyData.soundName, drumKeyData.audioSrc);
 });
 
-const keys = document.querySelectorAll('.key');
-keys.forEach((key) => key.addEventListener('transitionend', removeTransition));
-window.addEventListener('keydown', playSound);
-
 const container = document.getElementById("sound-wave-container");
 const waveIds = ["firstWave", "secondWave", "thirdWave"];
 
@@ -68,6 +55,19 @@ function createWaveElement(id) {
 }
 
 waveIds.forEach(createWaveElement);
+
+function playSound(e) {
+    const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
+    const key = document.querySelector(`.key[data-key='${e.keyCode}']`);
+    if (!audio) return;
+    audio.currentTime = 0;
+    audio.play();
+    key.classList.add('playing');
+}
+
+const keys = document.querySelectorAll('.key');
+keys.forEach((key) => key.addEventListener('transitionend', removeTransition));
+window.addEventListener('keydown', playSound);
 
 const firstWave = document.getElementById("firstWave");
 const secondWave = document.getElementById("secondWave");
