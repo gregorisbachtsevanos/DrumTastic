@@ -1,18 +1,6 @@
 # DrumTastic
 DrumTastic is an interactive drum player application built with vanilla JavaScript. It allows users to play various drum sounds by clicking on buttons or using keyboard shortcuts.
 
-Table of Contents
-Features\
-Installation\
-Usage\
-Project Structure\
-Contributing\
-License\
-Features\
-Interactive drum pad with multiple sounds\
-Keyboard shortcuts for playing drum sounds\
-Responsive design for different screen sizes\
-Installation
 To get started with DrumTastic, follow these steps:
 
 Clone the repository and cd into the project
